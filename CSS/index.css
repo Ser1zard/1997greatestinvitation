@@ -126,6 +126,17 @@ body::after {
     filter: brightness(50%);
 }
 
+.stack_wrapper {
+    display: grid;
+    place-items: center;
+}
+
+.stack_wrapper img {
+    grid-area: 1 / 1;
+    justify-self: center;
+    align-self: center;
+}
+
 #email_notification {
     image-rendering: pixelated;
     width: 30rem;
@@ -148,15 +159,16 @@ body::after {
 
 #explosion {
     image-rendering: pixelated;
-    width: 30rem;
+    width: 50rem;
     height: auto;
-    margin: 1rem;
+    padding-top: 5em;
+    z-index: 3;
 }
 
 #invitation {
     image-rendering: pixelated;
-    width: 20rem;
+    width: 30rem;
     height: auto;
-    margin: 1rem;
     transition: opacity 1s ease-in;
+    z-index: 2;
 }
