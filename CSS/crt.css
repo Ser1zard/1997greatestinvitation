@@ -13,6 +13,12 @@
     }
 }
 
+@keyframes crt-anim-wobble {
+    0%, 100% { transform: translateX(0); }
+    25%      { transform: translateX(-.25rem); }
+    75%      { transform: translateX(.25rem); }
+}
+
 @keyframes crt-anim-sweepBar {
     0%   { transform: translateY(120vh); opacity: 0; }
     8%   { opacity: 0.5; }
@@ -127,4 +133,8 @@ body::after {
 .crt-wrapper > * {
     transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(0.95);
     transform-style: preserve-3d;
+}
+
+.crt-wobble {
+    animation: crt-anim-wobble 15s linear infinite;
 }
