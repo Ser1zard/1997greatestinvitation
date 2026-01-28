@@ -31,6 +31,31 @@
     }
 }
 
+@keyframes crtSweepBar {
+    0%   { transform: translateY(120vh); opacity: 0; }
+    8%   { opacity: 0.5; }
+    92%  { opacity: 0.5; }
+    100% { transform: translateY(-120vh); opacity: 0; }
+}
+
+html::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 12rem;
+    z-index: 9996;
+    pointer-events: none;
+
+    background: rgba(100, 100, 100, 0.5);
+
+    filter: blur(20px);
+    mix-blend-mode: screen;
+
+    animation: crtSweepBar 15s linear infinite;
+}
+
 html {
     height: 100%;
     font-size: 16px;
@@ -206,6 +231,10 @@ body::after {
 }
 
 @media (max-width: 500px) {
+    html::before {
+        height: 6rem;
+    }
+
     #email_notification {
         width: 15rem;
     }
