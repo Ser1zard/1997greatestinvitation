@@ -31,34 +31,6 @@
     }
 }
 
-@media (max-height: 1200px) {
-    #explosion {
-        width: 25rem;
-    }
-
-    #invitation {
-        width: 25rem;
-    }
-}
-
-@media (max-width: 500px) {
-    #email_notification {
-        width: 15rem;
-    }
-
-    #email_button {
-        width: 5rem;
-    }
-
-    #explosion {
-        width: 15rem;
-    }
-
-    #invitation {
-        width: 15rem;
-    }
-}
-
 html {
     font-size: 16px;
 }
@@ -202,4 +174,32 @@ body::after {
     height: auto;
     transition: opacity 1s ease-in;
     z-index: 2;
+}
+
+@media (max-height: 1200px) {
+    #explosion {
+        width: 25rem;
+    }
+
+    #invitation {
+        width: 25rem;
+    }
+}
+
+@media (max-width: 500px) {
+    #email_notification {
+        width: 15rem;
+    }
+
+    #email_button {
+        width: 5rem;
+    }
+
+    #explosion {
+        width: 15rem;
+    }
+
+    #invitation {
+        width: 15rem;
+    }
 }
