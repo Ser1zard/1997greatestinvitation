@@ -3,28 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="CSS/index.css">
+
+    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="CSS/crt.css">
+    <link rel="stylesheet" href="CSS/components.css">
+    <link rel="stylesheet" href="CSS/media.css">
     <link rel="icon" type="image/png" href="IMGS/favicon.png">
+
     <title>You've got E-Mail!</title>
 </head>
 <body>
-    <div class="crt_wrapper">
+    <div class="crt-wrapper">
         <section>
             <article>
-                <img id="email_notification" class="rgb_bleed" src="IMGS/email.gif" alt="You've got E-Mail!">
+                <img id="email-img" class="rgb-bleed" src="IMGS/email.gif" alt="You've got E-Mail!">
                 <br>
-                <button id="email_button_btn" class="btn">
-                    <img id="email_button" class="rgb_bleed" src="IMGS/btn.gif" alt="Open">
+                <button id="btn-button" class="button">
+                    <img id="btn-img" class="rgb-bleed" src="IMGS/btn.gif" alt="Open">
                 </button>
 
-                <div class="stack_wrapper">
-                    <img id="explosion" class="rgb_bleed" src="IMGS/xpl.gif" alt="Ops" style="display: none;">
-                    <img id="invitation" class="rgb_bleed" src="IMGS/ltr.png" alt="Ops" style="display: none; opacity: 0;">
+                <!--
+                    xpl-img and ltr-img are hidden elements which display on top of each other when btn-button
+                    is pressed.
+                    The stack-wrapper stacks the elements on top of each other thanks to CSS ruling.
+                -->
+                <div class="stack-wrapper">
+                    <img id="xpl-img" class="rgb-bleed" src="IMGS/xpl.gif" alt="Ops" style="display: none;">
+                    <img id="ltr-img" class="rgb-bleed" src="IMGS/ltr.png" alt="Ops" style="display: none; opacity: 0;">
                 </div>
             </article>
         </section>
     </div>
 
+    <!--
+        index.js main job is to make the button reactive.
+    -->
     <script src="JS/index.js"></script>
 </body>
 </html>
