@@ -6,8 +6,13 @@
   <article>
     <p>This project ic comprised of:</p>
     <ol>
-      <p>An HTML index page;</p>
-      <p>A CSS stylesheet to create the CRT-look;</p>
-      <p>a JS script to update the page and play sounds.</p>
+      <p>An <strong>HTML</strong> index page;</p>
+      <p>A <strong>CSS</strong> stylesheet to create the CRT-look;</p>
+      <p>a <strong>JS</strong> script to update the page and play sounds.</p>
   </article>
 </section>
+<footer>
+  <h4>
+    Created by Ser1zard.
+  </h4>
+</footer>
