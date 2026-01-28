@@ -32,7 +32,10 @@
 }
 
 html {
+    height: 100%;
     font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
 
 html::after {
@@ -79,16 +82,14 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 100vh;
+    height: 100%;
     background-image: url("../IMGS/bg.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     position: relative;
     overflow: hidden;
-}
-
-div, article, section, footer {
+    margin: 0;
     padding: 0;
 }
 
@@ -183,6 +184,24 @@ body::after {
 
     #invitation {
         width: 25rem;
+    }
+}
+
+@media (max-height: 600px) {
+    #email_notification {
+        width: 15rem;
+    }
+
+    #email_button {
+        width: 5rem;
+    }
+
+    #explosion {
+        width: 15rem;
+    }
+
+    #invitation {
+        width: 15rem;
     }
 }
 

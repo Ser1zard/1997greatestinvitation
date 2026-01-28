@@ -1,4 +1,5 @@
 const explosionSound = new Audio("AUDIO/explosion.mp3");
+
 explosionSound.volume = 0.3;
 
 document.getElementById('email_button_btn').addEventListener('click', function() {
