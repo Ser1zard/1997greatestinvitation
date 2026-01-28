@@ -1,0 +1,70 @@
+.button {
+    cursor: pointer;
+
+    border: none;
+    padding: 0;
+
+    background: none;
+}
+
+.button:hover img {
+    filter: brightness(75%);
+}
+
+.button:active {
+    filter: brightness(50%);
+}
+
+.stack-wrapper {
+    display: grid;
+    place-items: center;
+}
+
+.stack-wrapper img {
+    grid-area: 1 / 1;
+    justify-self: center;
+    align-self: center;
+}
+
+#email-img {
+    image-rendering: pixelated;
+
+    width: 30rem;
+    height: auto;
+    margin: 1rem;
+
+    transition: transform 0.3s ease;
+}
+
+#email-img:hover {
+    transform: scale(1.05);
+}
+
+#btn-img {
+    image-rendering: pixelated;
+
+    width: 10rem;
+    height: auto;
+    margin: 1rem;
+
+    transition: filter 0.1s steps(1);
+}
+
+#xpl-img {
+    z-index: 3;
+
+    image-rendering: pixelated;
+
+    width: 50rem;
+    height: auto;
+}
+
+#ltr-img {
+    z-index: 2;
+
+    image-rendering: pixelated;
+
+    width: 30rem;
+    height: auto;
+    transition: opacity 1s ease-in;
+}

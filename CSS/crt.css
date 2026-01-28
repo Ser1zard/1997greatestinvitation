@@ -1,0 +1,130 @@
+@keyframes crt-anim-scanlines {
+    0% {
+        background-position: 0 0;
+        opacity: 0.9;
+    }
+    50% {
+        background-position: 0 -5px;
+        opacity: 1;
+    }
+    100% {
+        background-position: 0 -10px;
+        opacity: 0.9;
+    }
+}
+
+@keyframes crt-anim-sweepBar {
+    0%   { transform: translateY(120vh); opacity: 0; }
+    8%   { opacity: 0.5; }
+    92%  { opacity: 0.5; }
+    100% { transform: translateY(-120vh); opacity: 0; }
+}
+
+@keyframes crt-anim-rgbBleed {
+    0%, 90%, 100% {
+        filter: drop-shadow(2px 0 rgba(255, 0, 0, 0.5))
+        drop-shadow(-2px 0 rgba(0, 255, 255, 0.5))
+        blur(1.3px);
+    }
+    91% {
+        filter: drop-shadow(4px 0 rgba(255, 0, 0, 0.8))
+        drop-shadow(-4px 0 rgba(0, 255, 255, 0.8))
+        blur(1.5px);
+    }
+    93% {
+        filter: drop-shadow(-3px 0 rgba(255, 0, 0, 0.7))
+        drop-shadow(3px 0 rgba(0, 255, 255, 0.7))
+        blur(1.4px);
+    }
+}
+
+html::before {
+    z-index: 9996;
+
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 12rem;
+
+    pointer-events: none;
+
+    background: rgba(100, 100, 100, 0.5);
+    filter: blur(20px);
+    mix-blend-mode: screen;
+
+    animation: crt-anim-sweepBar 15s linear infinite;
+}
+
+html::after {
+    z-index: 10000;
+
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    border-radius: 10%;
+    box-shadow:
+            inset 0 0 0 2000px transparent,
+            0 0 0 2000px #000;
+}
+
+body::before {
+    z-index: 9998;
+
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+            repeating-linear-gradient(
+                    to bottom,
+                    rgba(255,255,255,0.03) 0px,
+                    rgba(255,255,255,0.03) 1px,
+                    transparent 1px,
+                    transparent 2px
+            ),
+            repeating-linear-gradient(
+                    to bottom,
+                    rgba(0,0,0,0.1) 0px,
+                    transparent 1px,
+                    transparent 3px,
+                    rgba(0,0,0,0.1) 3px
+            );
+    background-size: 100% 2px, 100% 6px;
+
+    animation: crt-anim-scanlines 1.5s linear infinite;
+}
+
+body::after {
+    z-index: 9999;
+
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    border-radius: 10%;
+    box-shadow: inset 0 0 500px rgba(0, 0, 0, 0.8),
+    inset 0 0 1000px rgba(0, 0, 0, 0.5);
+    filter: blur(5px);
+}
+
+.crt-wrapper {
+    animation: crt-anim-rgbBleed 3s infinite;
+
+    perspective: 1000px;
+    position: relative;
+}
+
+.crt-wrapper > * {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(0.95);
+    transform-style: preserve-3d;
+}

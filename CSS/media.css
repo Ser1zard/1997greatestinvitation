@@ -1,0 +1,49 @@
+@media (max-height: 1200px) {
+    #xpl-img {
+        width: 25rem;
+    }
+
+    #ltr-img {
+        width: 25rem;
+    }
+}
+
+@media (max-height: 600px) {
+    #email-img {
+        width: 15rem;
+    }
+
+    #btn-img {
+        width: 5rem;
+    }
+
+    #xpl-img {
+        width: 15rem;
+    }
+
+    #ltr-img {
+        width: 15rem;
+    }
+}
+
+@media (max-width: 500px) {
+    html::before {
+        height: 6rem;
+    }
+
+    #email-img {
+        width: 15rem;
+    }
+
+    #btn-img {
+        width: 5rem;
+    }
+
+    #xpl-img {
+        width: 20rem;
+    }
+
+    #ltr-img {
+        width: 20rem;
+    }
+}
