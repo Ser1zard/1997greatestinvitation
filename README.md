@@ -2,6 +2,7 @@
 <header>
   <p>A simple web page in a retro style which task is to send out invitations!</p>
 </header>
+<br>
 <section>
   <article>
     <p>This project ic comprised of:</p>
@@ -11,6 +12,7 @@
       <p>a <strong>JS</strong> script to update the page and play sounds.</p>
   </article>
 </section>
+<hr>
 <footer>
   <h4>
     Created by Ser1zard.
